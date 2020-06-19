@@ -5,3 +5,5 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/VeguiIzumi/simplebot)
 
 * MINI BOT TEMPLATE FOR DISCORD USING NODE.JS
+* FOR FUN :)
+* [Link Auth Example Bot](https://discord.com/oauth2/authorize?client_id=723511825223909407&permissions=8&scope=bot)
