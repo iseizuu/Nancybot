@@ -19,8 +19,8 @@ module.exports = client => {
                   let cmd = require(`../commands/${category}/${file}`);
                        client.commands.set(cmd.name, cmd);
                   
-                      if (cmd.alias && Array.isArray(cmd.aliases))
-                      cmd.aliases.forEach(alias => bot.alias.set(aliases, cmd.name))
+                      if (cmd.aliases && Array.isArray(cmd.aliases))
+                      cmd.aliases.forEach(aliases => client.aliases.set(aliases, cmd.name))
           
                 }
                 
