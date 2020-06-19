@@ -1,6 +1,5 @@
-const { Client } = require('discord.js');
 
-class Util extends Client {
+module.exports = class Util {
 
     static embedURL(title, url, display) {
 		return `[${title}](${url.replace(/\)/g, '%27')}${display ? ` "${display}"` : ''})`;
@@ -13,5 +12,5 @@ class Util extends Client {
     static shorten(text, maxLen = 2000) {
 		return text.length > maxLen ? `${text.substr(0, maxLen - 3)}...` : text;
 	}
+    
 }
-module.exports = Util;
