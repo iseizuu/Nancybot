@@ -9,7 +9,5 @@
 * [Link Auth Example Bot](https://discord.com/oauth2/authorize?client_id=723511825223909407&permissions=8&scope=bot)
 
 # SCREENSHOTS
-* help
-![Test Image 7](https://cdn.discordapp.com/attachments/718032929825226884/723851236448796712/unknown.png)
-* help [command]
-![Test Image 2](https://cdn.discordapp.com/attachments/718032929825226884/723851409073635398/unknown.png)
+![Test Image 7](https://cdn.discordapp.com/attachments/718032929825226884/723852433599758376/unknown.png)
+
