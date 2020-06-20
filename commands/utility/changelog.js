@@ -5,6 +5,7 @@ const { shorten, base64, embedURL } = require('../../structures/Util');
 module.exports = {
     name: 'changelog',
     aliases: ['update','clog'],
+    description: 'Show the latest commits from github',
 	run: async (client, msg) => {
         try {
         const { body } = await request

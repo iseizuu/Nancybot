@@ -15,7 +15,9 @@ function clean(text) {
 module.exports = {
   name: "eval",
   aliases: ["e"],
-    run: async(client, message, args) => {
+  description: 'Evalved Js',
+  usage: 'eval [input] || eval client',
+  run: async(client, message, args) => {
 
         if (message.author.id !== '271576733168173057') return message.channel.send('Hah? anda siapa?');
         const bot = client;
