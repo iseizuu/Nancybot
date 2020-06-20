@@ -8,13 +8,14 @@ module.exports = {
 	run: async (client, msg) => {
         try {
         const { body } = await request
-		.get(`https://api.github.com/repos/VeguiIzumi/simplebot/commits`)
+		.get(`https://api.github.com/repos/VeguiIzumi/Nancybot/commits`)
 		.set({ Authorization: `Basic ${base64(`VeguiIzumi:${process.env.PW_GITHUB}`)}` });
         const commits = body.slice(0, 10);
         const embed = new MessageEmbed()
-		    .setTitle(`[Simplebot:master] Latest 10 commits`)
+            .setAuthor('Github', 'https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png')
+		    .setTitle(`[Nancybot:master] Latest 10 commits`)
             .setColor('#cce7e8')
-            .setURL(`https://github.com/VeguiIzumi/simplebot/commits/master`)
+            .setURL(`https://github.com/VeguiIzumi/Nancybot/commits/master`)
             .setFooter(msg.author.tag)
             .setTimestamp()
 		    .setDescription(commits.map(commit => {

@@ -17,6 +17,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.2.0",
     "fs": "0.0.1-security",
-    "node-superfetch": "^0.1.10"
+    "node-superfetch": "^0.1.10",
+    "util": "^0.12.3"
   }
 }
