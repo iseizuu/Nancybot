@@ -31,7 +31,7 @@ module.exports = {
             msg.channel.send(embed)
         });
         } catch (er) {
-            msg.channel.send({color: 'RED', embed: {description: `Whoopsss, ${er}`}});
+            msg.channel.send({color: 'RED', embed: {description: `Whoopsss, User are not Listening Spotify right now!`}});
         }
     }
 }
