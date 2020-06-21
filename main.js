@@ -17,7 +17,7 @@ const client = new Client({
   client.on("ready", async () =>{
     console.log(`${client.user.username} Wake up :)`);
     setInterval(async () => {
-      let ran = [`Nancy Momoland <3`];
+      let ran = [`Spotify`];
       let dom = ran[Math.floor(Math.random() * ran.length)];
       client.user.setPresence({
         activity: {
