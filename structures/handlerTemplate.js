@@ -6,6 +6,6 @@ module.exports = {
     description: '',
     cooldown: 5,
     run: async (client, msg) => {
-        //content
+        //ur cmd
     }
 }
