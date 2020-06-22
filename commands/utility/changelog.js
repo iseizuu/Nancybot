@@ -19,7 +19,7 @@ module.exports = {
             .setURL(`https://github.com/VeguiIzumi/Nancybot/commits/master`)
             .setFooter(msg.author.tag)
             .setTimestamp()
-	     .setDescription(commits.map(commit => {
+	    .setDescription(commits.map(commit => {
         const hash = embedURL(`\`${commit.sha.slice(0, 7)}\``, commit.html_url, false);
         return `${hash} ${shorten(commit.commit.message.split('\n')[0], 50)} - VeguiIzumi`;}).join('\n'));
         msg.channel.send(embed)
