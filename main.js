@@ -35,6 +35,12 @@ const client = new Client({
       .setDescription(`Anyyeong **${message.author.username}**, i still running on heavy development\n prefix ${NancyPrefix}`)
       if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)
   return message.channel.send(embed);
+
+  if(message.channel.id === '721849138337153103') { //this is just my private channel, u can delete this
+    if(message.author.bot) return
+    message.delete()
+    message.content
+  }
   });
 
   
