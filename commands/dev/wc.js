@@ -24,10 +24,10 @@ module.exports = {
 			ctx.fillStyle = '#40e9ff';
 			ctx.font = '24px Heroes Legend';
 			ctx.fillStyle = 'black';
-			ctx.fillText(gw.user.tag, 358, 290);
+			ctx.fillText(gw.user.tag, 358, 295);
 			ctx.font = '18px Heroes Legend';
             		ctx.fillStyle = 'white';
-            		ctx.fillText(msg.guild.name, 408, 398)
+            		ctx.fillText(msg.guild.name, 408, 392)
 			return msg.channel.send({ files: [{ attachment: canvas.toBuffer(), name: 'Nancywlcm.png' }] });
 		} catch (err) {
 			return msg.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
