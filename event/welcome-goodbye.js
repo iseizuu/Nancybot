@@ -20,10 +20,10 @@ module.exports = client => {
 			ctx.fillStyle = '#40e9ff';
 			ctx.font = '24px Heroes Legend';
 			ctx.fillStyle = 'black';
-			ctx.fillText(member.user.tag, 358, 260);
+			ctx.fillText(member.user.tag, 358, 275);
 			ctx.font = '18px Heroes Legend';
             		ctx.fillStyle = 'white';
-            		ctx.fillText(member.guild.name, 408, 342)
+            		ctx.fillText(member.guild.name, 408, 350)
 			return channel.send({ files: [{ attachment: canvas.toBuffer(), name: 'Nancywlcm.png' }] });
 		} catch (err) {
 			return channel.send(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
