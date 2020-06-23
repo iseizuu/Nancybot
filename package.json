@@ -4,7 +4,7 @@
   "description": "Idunno",
   "main": "main.js",
   "scripts": {
-    "start" : "node main.js"
+    "start": "node main.js"
   },
   "engines": {
     "node": ">=12"
@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "billboard-top-100": "^2.5.9",
+    "canvas": "^2.6.1",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.2.0",
@@ -23,7 +24,9 @@
     "kpop": "^0.1.2",
     "ms": "^2.1.2",
     "neko-love-wrapper": "^1.2.1",
+    "node-pre-gyp": "^0.15.0",
     "node-superfetch": "^0.1.10",
+    "path": "^0.12.7",
     "spotify-url-info": "^1.3.1",
     "util": "^0.12.3"
   }

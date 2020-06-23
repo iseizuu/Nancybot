@@ -28,6 +28,9 @@ const client = new Client({
   ["cmdHandler"].forEach(file => {
       require(`./structures/cmdhandler`)(client);
   });
+  ["welcome-goodbye"].forEach(file => {
+    require(`./event/welcome-goodbye`)(client);
+});
 
 
   client.on("ready", async () =>{
