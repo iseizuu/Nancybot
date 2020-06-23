@@ -3,6 +3,22 @@ const Client = require('./structures/Client');
 const { MessageEmbed } = require('discord.js');
 const nancyClient = require('./structures/Client');
 const { NancyPrefix } = process.env;
+const http = require('http');
+const express = require('express');
+const app = express();
+var server = http.createServer(app);
+app.get("/", (request, response) => {
+  console.log('Nancy Got Pingged :)');
+  response.writeHead(200, {'Content-Type': 'text/plain'})
+  response.end("Anyyeong :u")
+});
+
+const listener = server.listen(process.env.PORT, function() {
+  console.log(`Waiting on port ` + listener.address().port);
+});
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.herokuapp.com`);
+}, 280000);
 const client = new Client({
     fetchAllMembers: true,
     disabledEvents: ["TYPING_START", "USER_NOTE_UPDATE"],
@@ -36,7 +52,7 @@ const client = new Client({
       if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)
   return message.channel.send(embed);
 
-  if(message.channel.id === '721849138337153103') { //this is just my private channel, u can delete this
+  if(message.channel.id === '724429978560626699') { //this is just my private channel, u can delete this
     if(message.author.bot) return
     message.delete()
     message.content
