@@ -27,7 +27,7 @@ module.exports = {
 			ctx.fillText(gw.user.tag, 358, 288);
 			ctx.font = '18px Heroes Legend';
             		ctx.fillStyle = 'white';
-            		ctx.fillText(msg.guild.name, 408, 366)
+            		ctx.fillText(msg.guild.name, 408, 358)
 			return msg.channel.send({ files: [{ attachment: canvas.toBuffer(), name: 'Nancywlcm.png' }] });
 		} catch (err) {
 			return msg.reply(`Oh no, an error occurred: \`${err.message}\`. Try again later!`);
