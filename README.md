@@ -7,6 +7,8 @@
 * MINI BOT TEMPLATE FOR DISCORD USING NODE.JS
 * FOR FUN :)
 * [Link Auth Example Bot](https://discord.com/oauth2/authorize?client_id=723511825223909407&permissions=8&scope=bot)
+## NB
+* `yang copas gw sembelih`
 
 # SCREENSHOTS
 ![Test Image 7](https://cdn.discordapp.com/attachments/718032929825226884/723852433599758376/unknown.png)
