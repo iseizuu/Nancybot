@@ -16,7 +16,7 @@ module.exports = {
         if (!args.length) {
 
             categories.forEach(async (category) => {
-              if (category == "owner") return;
+              if (category == "dev") return;
       
               const helpCommands = [ ];
               let categoryCommands = "";
