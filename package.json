@@ -13,6 +13,7 @@
   "author": "VeguiIzumi",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "billboard-top-100": "^2.5.9",
     "canvas": "^2.6.1",
     "discord.js": "^12.2.0",
