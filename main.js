@@ -20,6 +20,7 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.herokuapp.com`);
 }, 280000);
 const client = new Client({
+    owner: '271576733168173057',
     fetchAllMembers: true,
     disabledEvents: ["TYPING_START", "USER_NOTE_UPDATE"],
     disableEveryone: true
