@@ -19,7 +19,7 @@ module.exports = {
             if (!res.body.data.length) return msg.channel.send('😲 Auchh...Could not find any results.');
             var img = res.body.data[Math.floor(Math.random() * res.body.data.length)].images.original;
             let embed = new MessageEmbed()
-            .setAuthor('Ghiphy', 'https://img.harianjogja.com/thumb/posts/2020/05/18/1039485/e2861b0bf040ce1f178da0530afce9ed.png?w=600&h=400')
+            .setAuthor('Giphy', 'https://img.harianjogja.com/thumb/posts/2020/05/18/1039485/e2861b0bf040ce1f178da0530afce9ed.png?w=600&h=400')
             .setColor('RANDOM')
             .setDescription(`Query : ${gquery}\n[Source HERE](${img.url})`)
             .setImage(img.url)
