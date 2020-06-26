@@ -29,8 +29,8 @@ class nancyClient extends Client {
 		}
   }
   /**
-	 * Owners of the bot, set by the {@link CommandoClientOptions#owner} option
-	 * {@link CommandoClient#isOwner}.</info>
+	 * {@link nancyClientOptions#owner} option
+	 * {@link nancyClient#isOwner}.</info>
 	 * @type {?Array<User>}
 	 * @readonly
 	 */
