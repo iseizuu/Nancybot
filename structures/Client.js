@@ -9,7 +9,7 @@ class nancyClient extends Client {
 
     this.fetch = require('node-superfetch');
     this.dev = dev;
-
+	this.mongoose = require('../cores/mongoose');
     if(options.owner) {
 			this.once('ready', () => {
 				if(options.owner instanceof Array || options.owner instanceof Set) {

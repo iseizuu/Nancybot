@@ -23,6 +23,8 @@
     "fs": "0.0.1-security",
     "https": "^1.0.0",
     "kpop": "^0.1.2",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.20",
     "ms": "^2.1.2",
     "neko-love-wrapper": "^1.2.1",
     "node-pre-gyp": "^0.15.0",
