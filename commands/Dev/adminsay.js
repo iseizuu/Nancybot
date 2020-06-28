@@ -6,7 +6,7 @@ module.exports = {
     description: '',
     cooldown: 5,
     run: async (client, msg, args) => {
-        if(msg.author.id !== this.dev) return msg.channel.send('Design for developer only')
+        if(msg.author.id !== '271576733168173057') return msg.channel.send('Design for developer only')
         let say = args.join(" ")
         if(!say) {
             msg.channel.send('Write the text here, im waiting on 15 second')
