@@ -25,36 +25,17 @@ const client = new Client({
     disabledEvents: ["TYPING_START", "USER_NOTE_UPDATE"],
     disableEveryone: true
   });
+  require('./event/ready')(client);
+  require(`./structures/cmdhandler`)(client);
+  require(`./event/welcome-goodbye`)(client);
 
-  ["cmdHandler"].forEach(file => {
-      require(`./structures/cmdhandler`)(client);
-  });
-  ["welcome-goodbye"].forEach(file => {
-    require(`./event/welcome-goodbye`)(client);
-});
-
-
-  client.on("ready", async () =>{
-    console.log(`${client.user.username} Wake up :)`);
-    setInterval(async () => {
-      let ran = [`Nancyy <3`,'WIP 💬'];
-      let dom = ran[Math.floor(Math.random() * ran.length)];
-      client.user.setPresence({
-        activity: {
-          name: dom,
-          type: "WATCHING"
-        },
-        status: "online"
-      });
-    }, 5000) // millsecond
-  });
   
-  client.on('message', async message => {
-      let embed = new MessageEmbed()
-      .setColor('RANDOM')
-      .setDescription(`Anyyeong **${message.author.username}**, i still running on heavy development\n prefix ${NancyPrefix}`)
-      if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)
-  return message.channel.send(embed);
+client.on('message', async message => {
+    let embed = new MessageEmbed()
+    .setColor('RANDOM')
+    .setDescription(`Anyyeong **${message.author.username}**, i still running on heavy development\n prefix ${NancyPrefix}`)
+    if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)
+    return message.channel.send(embed);
   });
 client.mongoose.init();
 client.login(process.env.TOKEN)
