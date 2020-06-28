@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'instant-invite',
     aliases: ['chinvite', 'chi'],
-    description: '',
+    description: 'Creating instant invite guild',
     cooldown: 5,
     run: async (client, msg) => {
         try {
