@@ -19,7 +19,7 @@ module.exports = {
   usage: 'eval [input] || eval client',
   run: async(client, message, args) => {
 
-        if (message.author.id !== '271576733168173057') return message.channel.send('Hah? anda siapa?');
+        if (message.author.id !== '271576733168173057') return message.channel.send('Design for developer only!');
         const bot = client;
         const msg = message;
         const { query, flags } = parseQuery(args);

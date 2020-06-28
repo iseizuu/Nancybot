@@ -5,7 +5,7 @@ const path = require('path');
 registerFont(path.join(__dirname, '..', '..', 'cores', 'fonts', 'Heroes Legend.ttf'), { family: 'Heroes Legend' });
 module.exports = {
     name: 'wc',
-    aliases: [''],
+    aliases: ['welcome'],
     description: '',
     cooldown: 5,
     run: async (client, msg, args) => {

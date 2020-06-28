@@ -14,7 +14,7 @@ module.exports = {
     
         await webhook.send(args.join(" "), {
                 username: 'Pixelate',
-                avatarURL: 'https://w0.pngwave.com/png/173/214/safety-computer-icons-public-security-safe-png-clip-art.png',
+                avatarURL: 'https://cdn.monotaro.id/media/catalog/product/cache/6/image/b5fa40980320eb406ba395dece54e4a8/i/2/i2P101575650-2.jpg',
             });
         msg.channel.send('OK')
     }
