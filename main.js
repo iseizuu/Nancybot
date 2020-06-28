@@ -28,7 +28,7 @@ const client = new Client({
   require('./event/ready')(client);
   require(`./structures/cmdhandler`)(client);
   require(`./event/welcome-goodbye`)(client);
-
+  require('./event/msgFun/whoami')(client)
   
 client.on('message', async message => {
     let embed = new MessageEmbed()
