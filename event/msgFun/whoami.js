@@ -2,6 +2,7 @@
 module.exports = client => {
 
     client.on('message', async msg => {
+        try {
         if(msg.channel.name === 'who-am-i') {
             if(msg.author.discriminator === '0000') return
             msg.delete()
@@ -16,5 +17,8 @@ module.exports = client => {
                     avatarURL: ppl.displayAvatarURL(),
                 });
             }
+        } catch (er) {
+            msg.channel.send(`Please dont use bot command here`)
+        }
     })
 }
