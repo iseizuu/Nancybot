@@ -3,7 +3,7 @@ module.exports = client => {
 
     client.on('message', async msg => {
         try {
-        if(msg.channel.name === 'who-am-i') {
+        if(msg.channel.id === '726786112126713876') {
             if(msg.author.discriminator === '0000') return
             msg.delete()
             let ppl = msg.guild.members.cache.random().user;
