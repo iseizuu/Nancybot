@@ -109,5 +109,15 @@ function parseType(input) {
   return input === null || input === undefined ? "Void" : input.constructor.name;
 }
 
+function parseQuery(queries) {
+  const args = [];
+  const flags = [];
+  for (const query of queries) {
+      if (query.startsWith("--")) flags.push(query.slice(2).toLowerCase());
+      else args.push(query);
+  }
+  return { args, flags };
+  }
+
     }
 }

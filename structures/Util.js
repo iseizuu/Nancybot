@@ -12,16 +12,5 @@ module.exports = class Util {
     static shorten(text, maxLen = 2000) {
 		return text.length > maxLen ? `${text.substr(0, maxLen - 3)}...` : text;
 	}
-	  
-	
-    static parseQuery(queries) {
-		const args = [];
-		const flags = [];
-		for (const query of queries) {
-		  	if (query.startsWith("--")) flags.push(query.slice(2).toLowerCase());
-		  	else args.push(query);
-		}
-		return { args, flags };
-	  }
     
 }
