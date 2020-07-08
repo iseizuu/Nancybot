@@ -3,7 +3,6 @@ const req = require('node-superfetch')
 const path = require('path')
 registerFont(path.join(__dirname, '..', '..', 'cores', 'fonts', 'Noto-Bold.ttf'), {family: 'Noto-Bold'})
 registerFont(path.join(__dirname, '..', '..', 'cores', 'fonts', 'Noto-Regular.ttf'), {family: 'Noto-Regular'});
-registerFont(path.join(__dirname, '..', '..', 'cores', 'fonts', 'Heroes Legend.ttf'), { family: 'Heroes Legend' });
 
 module.exports = {
     name: 'custom-spotify',
