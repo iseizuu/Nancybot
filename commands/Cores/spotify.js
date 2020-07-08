@@ -18,7 +18,7 @@ module.exports = {
         if(spotify.name !== 'Spotify') return msg.channel.send({embed: {color: 'RED', description: `Whoopsss, ${user.user.tag} Is not Listening Spotify right now!`}});
         let slink = spotify.syncID;
         listener.getPreview(`https://open.spotify.com/track/${slink}`).then(async tracks => {
-            if(!args[0]) {
+            if(!args[0] || msg.content.includes(user)) {
                 var embed = new MessageEmbed()
                 .setAuthor('Spotify', 'https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-download-logo-30.png')
                 .setURL(tracks.link)
@@ -37,9 +37,7 @@ module.exports = {
                 msg.channel.send(embed)
             } else {
                     if(msg.content.includes("--canvas")) {
-                    if(msg.mentions.members.first() || msg.guild.members.cache.get(args[0])) return
-                    const tag = msg.author
-                    const ava = tag.displayAvatarURL({size: 2048, dynamic: true, format: 'png'})
+                    const ava = user.user.displayAvatarURL({size: 2048, dynamic: true, format: 'png'})
                     try {
                         const wait = await msg.channel.send({embed: {
                             description: 'Wait, Im screenshoting spotify display from my developer phone'

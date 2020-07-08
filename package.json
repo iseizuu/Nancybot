@@ -1,6 +1,6 @@
 {
   "name": "iizuuu",
-  "version": "1.2.2",
+  "version": "1.4.1",
   "description": "Idunno",
   "main": "main.js",
   "scripts": {
@@ -35,5 +35,14 @@
     "random-puppy": "^1.1.0",
     "spotify-url-info": "^1.3.1",
     "util": "^0.12.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeguiIzumi/Nancybot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VeguiIzumi/Nancybot/issues"
+  },
+  "homepage": "https://github.com/VeguiIzumi/Nancybot#readme"
 }
