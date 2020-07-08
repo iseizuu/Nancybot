@@ -13,7 +13,7 @@ module.exports = {
     run: async (client, msg, args) => {
         const title = args.join(" ")
         if(!title) return msg.channel.send('You must write the title of your song')
-        const maxLen = 15; // You can modify the max characters here
+        const maxLen = 25; // You can modify the max characters here
         if (title.length > maxLen) {
           return msg.channel.send({ embed: {
             color: 'RED',
@@ -38,7 +38,7 @@ module.exports = {
             ctx.textAlign = 'center'
             ctx.font = '45px Noto-Bold'
             ctx.fillStyle = '#ffffff'
-            ctx.fillText(client.user.username, 550, 110)
+            ctx.fillText(client.user.username, 550, 130)
             ctx.textAlign = 'left'
             ctx.font = '58px Noto-Bold'
             ctx.fillStyle = '#ffffff'
