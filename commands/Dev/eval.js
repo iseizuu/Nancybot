@@ -110,14 +110,14 @@ function parseType(input) {
 }
 
 function parseQuery(queries) {
-  const args = [];
+  const qe = [];
   const flags = [];
-  for (const query of queries) {
-      if (query.startsWith("--")) flags.push(query.slice(2).toLowerCase());
-      else args.push(query);
+  for (const args of queries) {
+    if (args.startsWith("--")) qe.push(args.slice(2).toLowerCase());
+    else qe.push(args);
   }
-  return { args, flags };
-  }
+  return { qe, flags };
+    }
 
     }
 }

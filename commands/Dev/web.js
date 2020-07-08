@@ -8,7 +8,7 @@ module.exports = {
     run: async (client, msg, args) => {
         if(msg.author.id !== '271576733168173057') return msg.channel.send('Whoops');
         const webhookClient = new Discord.WebhookClient('719033399058366525', process.env.WEBTOKEN);
-        const channel = client.channels.cache.get('724931004506046496');
+        const channel = client.channels.cache.get('729234184249540699');
         const webhooks = await channel.fetchWebhooks();
         const webhook = webhooks.first();
     
