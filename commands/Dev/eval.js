@@ -108,16 +108,15 @@ function parseType(input) {
   }
   return input === null || input === undefined ? "Void" : input.constructor.name;
 }
-
 function parseQuery(queries) {
-  const qe = [];
+  const qw = [];
   const flags = [];
-  for (const args of queries) {
-    if (args.startsWith("--")) qe.push(args.slice(2).toLowerCase());
-    else qe.push(args);
+  for (const que of queries) {
+    if (que.startsWith("--")) flags.push(que.slice(2).toLowerCase());
+    else qw.push(que);
   }
-  return { qe, flags };
-    }
+  return { args, flags };
+}
 
     }
 }

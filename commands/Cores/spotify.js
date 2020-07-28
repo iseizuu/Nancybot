@@ -18,18 +18,20 @@ module.exports = {
         if(spotify.name !== 'Spotify') return msg.channel.send({embed: {color: 'RED', description: `Whoopsss, ${user.user.tag} Is not Listening Spotify right now!`}});
         let slink = spotify.syncID;
         listener.getPreview(`https://open.spotify.com/track/${slink}`).then(async tracks => {
-            if(!args[0] || msg.content.includes(user)) {
+            if(msg.content.includes(user) || !args[0]) {
+                var title = tracks.artist;
+                var artis = tracks.track;
                 var embed = new MessageEmbed()
                 .setAuthor('Spotify', 'https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-download-logo-30.png')
                 .setURL(tracks.link)
                 .setColor('RANDOM')
                 .setTitle(tracks.title)
                 .setDescription(``)
-                .addField('Artist :', tracks.artist, true)
-                .addField('Track :', tracks.track, true)
-                .addField ('Type :', tracks.type, false)
+                .addField('Artist :', artis, true)
+                .addField('Track :', title, true)
+                .addField ('Type :', tracks.type, true)
                 .addField('Listener', user.user.username, false)
-                .addField('Download Preview Track :', `[Download](${tracks.audio})`, false)
+                .addField('Preview Track', `[Download](${tracks.audio})`, true)
                 .addField('Spotify Embed', `[Click Here To View](${tracks.embed})`, true)
                 .setThumbnail(tracks.image)
                 .setFooter(`Requsted By : ${user.user.username}`)
@@ -42,7 +44,7 @@ module.exports = {
                         const wait = await msg.channel.send({embed: {
                             description: 'Wait, Im screenshoting spotify display from my developer phone'
                         }})
-                        const resultAva = await req.get(ava)
+                        const resultAva = await req.get(tracks.image)
                         const avaEnd = await loadImage(resultAva.body)
                         const base = await loadImage(path.join(__dirname, '..', '..', 'cores', 'img', 'spotipi.png'));
                         const canvas = createCanvas(base.width, base.height)
