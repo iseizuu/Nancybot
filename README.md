@@ -3,6 +3,7 @@
 
 [![Discord](https://discordapp.com/api/guilds/544405286975176704/embed.png)](https://discord.gg/YmJEcFR)
 ![GitHub repo size](https://img.shields.io/github/repo-size/VeguiIzumi/simplebot)
+[![Run on Repl.it](https://repl.it/badge/github/VeguiIzumi/Nancybot)](https://repl.it/github/VeguiIzumi/Nancybot)
 
 * MINI BOT TEMPLATE FOR DISCORD USING NODE.JS
 * FOR FUN :)
