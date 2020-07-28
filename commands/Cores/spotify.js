@@ -19,20 +19,18 @@ module.exports = {
         let slink = spotify.syncID;
         listener.getPreview(`https://open.spotify.com/track/${slink}`).then(async tracks => {
             if(msg.content.includes(user) || !args[0]) {
-                var title = tracks.artist;
-                var artis = tracks.track;
                 var embed = new MessageEmbed()
                 .setAuthor('Spotify', 'https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-download-logo-30.png')
                 .setURL(tracks.link)
                 .setColor('RANDOM')
                 .setTitle(tracks.title)
                 .setDescription(``)
-                .addField('Artist :', artis, true)
-                .addField('Track :', title, true)
+                .addField('Artist :', tracks.artist, true)
+                .addField('Track :', tracks.track, true)
                 .addField ('Type :', tracks.type, true)
-                .addField('Listener', user.user.username, false)
                 .addField('Preview Track', `[Download](${tracks.audio})`, true)
                 .addField('Spotify Embed', `[Click Here To View](${tracks.embed})`, true)
+                .addField('Listener', user.user.username, false)
                 .setThumbnail(tracks.image)
                 .setFooter(`Requsted By : ${user.user.username}`)
                 .setTimestamp()
@@ -58,14 +56,14 @@ module.exports = {
                         ctx.textAlign = 'left'
                         ctx.font = '58px Noto-Bold'
                         ctx.fillStyle = '#ffffff'
-                        ctx.fillText(tracks.title, 95, 1650)
+                        ctx.fillText(tracks.title.length > 28 ? tracks.title.substring(0, 28).trim() + "..." : tracks.title, 95, 1650)
                         ctx.font = '48px Noto-Regular'
-                        ctx.fillText(tracks.artist, 95, 1710)
+                        ctx.fillText(tracks.artist.length > 38 ? tracks.artist.substring(0, 38).trim() + "..." : tracks.artist, 95, 1710)
                         await wait.edit({embed: {description: 'Almost Done!'}}).then(z => z.delete({timeout: 1000}))
                         return msg.channel.send({files: [{attachment: canvas.toBuffer(), name: 'Spotify.png'}]})
     
             } catch (er) {
-                msg.channel.send(er)
+                msg.channel.send('Error :' + er)
                 console.log(er)
     
             }
