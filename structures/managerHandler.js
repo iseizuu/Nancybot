@@ -2,8 +2,6 @@ const { Rest } = require('lavacord');
 const { Manager } = require('@lavacord/discord.js');
 const { Collection } = require('discord.js');
 const Queue = require('./managerQueue');
-const Util = require('./Util');
-const util = new Util();
 const config = require('../config.json');
 
 class managerHandler {
@@ -33,7 +31,7 @@ class managerHandler {
                     guild: message.guild.id,
                     node: "default"
                 }, {
-                    selfdeaf: true
+                    //selfdeaf: true
                 });
                 queue.setPlayer(player);
                 this.play(message.guild, song);
@@ -54,7 +52,10 @@ class managerHandler {
     play(guild, song) {
         const serverQueue = this.queue.get(guild.id);
         if (!song) {
-            serverQueue.textChannel.send("Out");
+            serverQueue.textChannel.send({embed: {
+                description: 'Im out, because song has ended',
+                color: 'RANDOM'
+            }});
             this.manager.leave(guild.id);
             this.queue.delete(guild.id);
         } else {
@@ -71,9 +72,11 @@ class managerHandler {
                 });
             serverQueue.player.volume(serverQueue.volume);
             serverQueue.textChannel.send({embed: {
-                description: `[${song.info.title}](${song.info.uri})
-                Uploaded: ${song.info.author}`,
-                color: 'GREEN'
+                description: `[${song.info.title}](${song.info.uri}) \nUploaded: ${song.info.author}`,
+                color: 'GREEN',
+                footer: {
+                    text: `Song req by: ${serverQueue.songs[0].requestedBy.username}`
+                }
             }});
         }
     }

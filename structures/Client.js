@@ -15,14 +15,10 @@ class nancyClient extends Client {
 
 	this.handlerManager = null;
 	this.fetch = require('node-superfetch');
-    this.dev = dev;
+	this.dev = dev;
 	this.mongoose = require('../cores/mongoose');
 	this.util = require('./Util')
-	this
-	.on("ready", () => {
-		this.handlerManager = new HandlerManager(this);
-		console.log("Bot is online!");
-	})
+	this.handlerManager = new HandlerManager(this);
 
 
     if(options.owner) {
