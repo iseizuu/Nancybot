@@ -72,8 +72,12 @@ class managerHandler {
                 });
             serverQueue.player.volume(serverQueue.volume);
             serverQueue.textChannel.send({embed: {
+                title: '🎵 | Playing',
                 description: `[${song.info.title}](${song.info.uri}) \nUploaded: ${song.info.author}`,
                 color: 'GREEN',
+                thumbnail: {
+                    url: `https://img.youtube.com/vi/${song.info.identifier}/hqdefault.jpg`
+                },
                 footer: {
                     text: `Song req by: ${serverQueue.songs[0].requestedBy.username}`
                 }
