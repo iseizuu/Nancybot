@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'ping',
-    aliases: ['p'],
+    aliases: ['pong'],
     description: 'Show ping latency',
     cooldown: 5,
     run: async (client, msg) => {

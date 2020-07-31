@@ -6,3 +6,9 @@ cores/fonts/as.ttf
 cores/fonts/OpenSans-ExtraBold.ttf
 cores/fonts/OpenSans-Semibold.ttf
 commands/Dev/tester.js
+logs/spring.log
+application.yml
+server/.dockerignore
+server/Dockerfile
+server/Lavalink.jar
+server/VERSION.txt

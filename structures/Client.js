@@ -1,15 +1,30 @@
 const { Client, Collection } = require('discord.js');
 const { dev } = require('../config.json');
+const HandlerManager = require('./managerHandler')
+/**
+ * @class nancyClient
+ * @extends {Client}
+ */
 class nancyClient extends Client {
-  /**
+  	/**
 	 * @property {string|string[]|Set<string>} [owner]
+	 * @param {import("discord.js").ClientOptions} [options]
 	 */
   constructor (options) {
-    super (options);
+	super (options);
 
-    this.fetch = require('node-superfetch');
+	this.handlerManager = null;
+	this.fetch = require('node-superfetch');
     this.dev = dev;
 	this.mongoose = require('../cores/mongoose');
+	this.util = require('./Util')
+	this
+	.on("ready", () => {
+		this.handlerManager = new HandlerManager(this);
+		console.log("Bot is online!");
+	})
+
+
     if(options.owner) {
 			this.once('ready', () => {
 				if(options.owner instanceof Array || options.owner instanceof Set) {
