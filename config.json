@@ -1,6 +1,6 @@
 {
 "dev" : "271576733168173057",
 "nodes": [
-    { "id": "default", "host": "localhost", "port": 2333, "password": "youshallnotpass" }
+    { "id": "default", "host": "localhost", "port": 2333, "region": "asia", "password": "youshallnotpass" }
 ]
 }

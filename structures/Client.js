@@ -16,7 +16,6 @@ class nancyClient extends Client {
 	this.handlerManager = null;
 	this.fetch = require('node-superfetch');
 	this.dev = dev;
-	this.mongoose = require('../cores/mongoose');
 	this.util = require('./Util')
 	this.handlerManager = new HandlerManager(this);
 

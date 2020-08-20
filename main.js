@@ -37,5 +37,4 @@ client.on('message', async message => {
     if (message.content === `<@!${client.user.id}>` || message.content === `<@${client.user.id}>`)
     return message.channel.send(embed);
   });
-client.mongoose.init();
 client.login(process.env.TOKEN)
