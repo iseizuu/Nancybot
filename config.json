@@ -1,6 +1,6 @@
 {
 "dev" : "271576733168173057",
 "nodes": [
-    { "id": "default", "host": "localhost", "port": 2333, "region": "asia", "password": "youshallnotpass" }
+    { "id": "default", "host": "http://lavalinkmai.herokuapp.com/", "port": 80, "region": "asia", "password": "maiihaveurpass" }
 ]
 }
