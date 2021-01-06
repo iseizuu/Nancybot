@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@lavacord/discord.js": "0.0.7",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "billboard-top-100": "^2.5.9",
     "canvas": "^2.6.1",
     "child_process": "^1.0.2",
